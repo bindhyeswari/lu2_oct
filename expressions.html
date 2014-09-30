@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        function add () { // expression
+
+        }
+
+        add(); // statement
+
+        var p = add() + add(); // add() --> invocation
+
+        // function definitions and invocations --- expressions
+
+        function invoke(fn) {
+            fn();
+        }
+
+        invoke(add); // add --> expression
+
+        invoke(function () {
+            // anonymous function
+        });
+
+        invoke(function subtract () {
+            // named function
+            // can be a recursive function
+        });
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

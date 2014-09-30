@@ -15,12 +15,24 @@
             // return the frequency of n
         }
 
-        function frequency() {
+        function binarySearch_native(n) {
             // any javascript function
         }
 
 
+        function testCases () {
+            var largeArray = (function () {
+                var arr = [];
+                for (var i = 0, len = 1000; i < len; i++) {
+                    arr.push(Math.round(Math.random() * 100));
+                }
+                return arr.sort(function(a, b) { return a - b });
+            })();
 
+            console.log(largeArray);
+        }
+
+        testCases();
     </script>
 </head>
 <body>
