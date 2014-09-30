@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var obj = {}; // parent --> Object.prototype
+        console.log(Object.prototype.hasOwnProperty('toString')); // toString prints out [object <classname>]
+        console.log(typeof Object);
+
+        console.log(obj.toString());
+
+        function add (x, y) {
+            return x +  y;
+        }
+
+        add(1,2);
+
+        var asdf = {
+            id: 32,
+            print: function () {
+                console.log(this.id);
+            }
+        };
+
+        var x = {
+            id: 64
+        };
+
+        asdf.print(); // asdf.print()
+        asdf.print.call(x); // x.print()
+
+        console.log(Function.prototype.hasOwnProperty('call'));
+
+        // console.log(add.toString());
+
+        console.log(add.toString());
+
+        console.log(Function.prototype.toString.call(add)); // similar to asdf.print.call(x)
+        console.log(Object.prototype.toString.call(add));
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

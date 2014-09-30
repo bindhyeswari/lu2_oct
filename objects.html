@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        // object literal
+        var obj = {
+            30: 'Talin',
+            'first name': 'Ray'
+        };
+
+        console.log(obj[30]);
+        console.log(obj['first name']);
+        console.log(obj.length);
+
+        var arr = [];
+        arr[30] = 'Talin';
+
+        console.log(arr[30]);
+        console.log(arr.length);
+
+        // constructor
+        function Person () {
+            // this.id = 64;
+        }
+
+        Person.prototype.id = 64;
+
+        var ray = new Person();
+        var talin = new Person();
+
+        // 1. A new object is created
+        // 2. a reference to that object is provided to the constructor using the "this" keyword
+        // 3. Returns the object
+
+        console.log(ray.id);
+        console.log(talin.id);
+
+        var person2 = Object.create(Person.prototype);
+        console.log(person2.id);
+
+        console.log(ray.hasOwnProperty('id'));
+
+        var obj1 = new Object();
+        // TODO: What inputs does the new Object(<inputs>) take?
+
+
+        // 3rd way
+        var obj3 = Object.create(Object.prototype); // ES5
+        // TODO: Write your own Object.create_me function
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

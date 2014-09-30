@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+        var date = new Date();
+
+        var regex = new RegExp('asdf', 'gmi'); // g - global, m - multiline, i - case insensitive
+
+        console.log(regex.test('sssdf'));
+
+
+        var matches = 'Raysadfawefsdf Hengst'.match(regex);
+        console.log(matches);
+
+        console.log('Ray'.replace(/[a]/gmi, 'p'));
+
+
+        var string = 'asdf';
+        var string2 = new String('asdf');
+        console.log(string.toUpperCase());
+        console.log(string2.toUpperCase());
+
+        // TODO: capitalize all the letters of word using regular expression
+        console.log('ray is a ui developer!'.replace(/\s/gmi, 'b'));
+
+        console.log('ray is a ui developer!'.replace(/[a-z]/gmi, function (x) {
+            return x.charCodeAt(0);
+        }));
+
+
+
+        console.log('ray is a ui developer!'.replace(/\s/gmi, function random(x) {
+            return '\n';
+        }));
+
+
+
+        var n = 10;
+
+        Number.prototype.square = Number.prototype.square || function () {
+            return this * this;
+        };
+
+        console.log(n.square());
+
+        var x = true && (100 - 100);
+        console.log(x);
+
+        // NaN 0 '' undefined null false - falsy
+
+
+        if ( false || (100 - 100) ) console.log('this expression is true');
+        else console.log('this expression is false');
+
+    </script>
+</head>
+<body>
+
+
+
+
+</body>
+</html>

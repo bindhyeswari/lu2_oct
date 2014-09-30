@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        // attribute - prototype
+        function Person() {
+
+        }
+
+        Person.prototype.identifier = 'Im the Person prototype!';
+        Person.prototype.id = 100;
+        Person.prototype.valueOf = function () {
+            return JSON.stringify(Person.prototype);
+        };
+
+        var ray = new Person();
+
+        var protoype = Object.getPrototypeOf(ray); // print the prototype attribute
+        // TODO: Write a recursive function to print the hierarchy of ancestors for an object
+
+        console.log(protoype);
+        console.log(protoype + '\n');
+
+        console.log(protoype === Person.prototype);
+
+        function Car() {
+
+        }
+
+        var bmw = new Car();
+        Car.prototype = {};
+        var civic = new Car();
+
+        console.log(bmw.constructor);
+        console.log(bmw.constructor.prototype);
+
+        console.log(civic.constructor);
+        console.log(civic.constructor.prototype);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
